@@ -11,9 +11,9 @@ from API_key import *
 from pyzillow.pyzillow import ZillowWrapper, GetUpdatedPropertyDetails
 
 zillow_data = ZillowWrapper(ZWSID)
-updated_property_details_response = zillow_data.get_updated_property_details(12940850)
+updated_property_details_response = zillow_data.get_updated_property_details(4671144)
 result = GetUpdatedPropertyDetails(updated_property_details_response)
 
-print dir(result)
+#print dir(result)
 
 print result.year_built
