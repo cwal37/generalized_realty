@@ -23,7 +23,7 @@ def file_walk(directory):
 
 
 
-def filter_walk(source_directory, output_directory, column, value):
+def filter_walk(source_directory, output_directory, column, values):
     
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)    
@@ -36,7 +36,7 @@ def filter_walk(source_directory, output_directory, column, value):
     for fname in file_name_list:
         
         df = pd.read_csv(source_directory+ '\\' + fname)
-        df = df[df[column] == value]
+        df = df[df[column].isin(values)]
         output_name = output_directory+ '\\' + fname
         df.to_csv(output_name, index = False)
         

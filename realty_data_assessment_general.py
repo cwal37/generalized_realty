@@ -29,7 +29,10 @@ output_directory = 'C:\Users\lp0ougx3\Desktop\Development\generalized_realty\\fi
 # run filter walk when you need to generate new filtered files, otherwise it's
 # just an overhead on the whole script running
 
-region_filter = 60134
+# region filter is a list fo filter(s) (like zip codes) that will filter the data
+# Currently running some northern virginia zip codes
+region_filter = [22046, 22042, 22043, 22205, 22044, 22207, 22203, 22201, 22204,
+                 22211, 22202, 22041, 22180]
 str_filter = str(region_filter)
 
 filter_walk(source_directory, output_directory, 'RegionName', region_filter)
