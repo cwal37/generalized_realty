@@ -48,3 +48,4 @@ Temporary Items
 .apdisk
 *.csv
 API_key.py
+API_key.pyc
